@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /review/
+Allow: /setup/
+Allow: /offers/
+Allow: /disclosure/
+Allow: /privacy/
+
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+Sitemap: https://multilogin-ru-expert.github.io/sitemap.xml

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Настройка SOCKS5 прокси в Multilogin: Пошаговое руководство для арбитража</title>
+    <meta name="description" content="✓ Полное руководство: как настроить SOCKS5 прокси в Multilogin. Выбор провайдера, интеграция, проверка скорости, решение проблем.">
+    <meta name="keywords" content="SOCKS5 прокси, настройка Multilogin, мультиаккаунтинг, Bright Data, Smartproxy, жилые прокси, SOCKS5 Multilogin">
+    <meta name="author" content="Multilogin RU Expert">
+    <meta property="og:title" content="Настройка SOCKS5 прокси в Multilogin: Пошаговое руководство">
+    <meta property="og:type" content="article">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://multilogin-ru-expert.github.io/setup/">
+    
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Как настроить SOCKS5 прокси в Multilogin",
+      "description": "Пошаговое руководство по настройке SOCKS5 прокси для мультиаккаунтинга",
+      "image": "https://multilogin-ru-expert.github.io/assets/images/multilogin-ru-coupon-50mam-arbitrage.webp",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Вход в Multilogin",
+          "text": "Откройте Multilogin, введите учётные данные и перейдите в Settings"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Выбор провайдера прокси",
+          "text": "Выберите провайдера: Bright Data, Smartproxy, Oxylabs или IPQualityScore"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Добавление прокси",
+          "text": "Нажмите Add proxy, выберите SOCKS5, введите Host, Port, Username и Password"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Проверка прокси",
+          "text": "Нажмите Test Proxy для проверки соединения"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Создание профиля",
+          "text": "Создайте новый профиль и назначьте добавленный SOCKS5 прокси"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://multilogin-ru-expert.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Настройка",
+          "item": "https://multilogin-ru-expert.github.io/setup/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/styles.css">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            color: #1a1a1a;
+        }
+
+        .content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .step-block {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .step-block strong {
+            color: #1a1a1a;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .success {
+            background-color: #d4edda;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+        }
+
+        .content ul {
+            list-style: none;
+            margin: 20px 0 20px 30px;
+        }
+
+        .content li {
+            padding-left: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            color: #555;
+        }
+
+        .content li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <a href="/" class="logo">Multilogin RU Expert</a>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/review/">Обзор</a>
+            <a href="/setup/">Настройка</a>
+            <a href="/offers/">Промокод</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Как настроить SOCKS5 прокси в Multilogin: полное руководство 2026</h1>
+        <p style="font-size: 20px; margin-top: 20px; opacity: 0.95;">Пошаговая инструкция по выбору провайдера, интеграции и оптимизации SOCKS5 для мультиаккаунтинга</p>
+    </div>
+</section>
+
+<!-- Content -->
+<section class="content">
+    <div class="container">
+        <h2>SOCKS5 прокси: почему это критически важно для Multilogin?</h2>
+        <p>
+            SOCKS5 прокси — это необходимый инструмент для безопасного мультиаккаунтинга в Multilogin. Они полностью маскируют ваш реальный IP-адрес и трафик, позволяя системам Facebook, Google и Crypto думать, что каждый аккаунт работает с разного устройства и геолокации. Без SOCKS5 прокси ваш мультиаккаунтинг будет неполным и ненадёжным.
+        </p>
+
+        <h2>Пошаговое руководство по настройке</h2>
+
+        <h3>Шаг 1: Вход в Multilogin</h3>
+        <div class="step-block">
+            <strong>1.</strong> Откройте Multilogin на вашем компьютере<br>
+            <strong>2.</strong> Введите свои учётные данные (email и пароль)<br>
+            <strong>3.</strong> Перейдите в раздел <code>Settings</code> (Настройки)
+        </div>
+
+        <h3>Шаг 2: Выбор провайдера прокси</h3>
+        <p>
+            Multilogin поддерживает различные провайдеры прокси. Рекомендуемые провайдеры:
+        </p>
+        <ul>
+            <li><strong>Bright Data (бывший Luminati):</strong> Самая надёжная и стабильная сеть</li>
+            <li><strong>Smartproxy:</strong> Хороший выбор для начинающих с доступными ценами</li>
+            <li><strong>Oxylabs:</strong> Качественные жилые прокси</li>
+            <li><strong>IPQualityScore:</strong> Специализированные прокси для крипто</li>
+        </ul>
+
+        <h3>Шаг 3: Добавление прокси в Multilogin</h3>
+        <div class="step-block">
+            <strong>1.</strong> В Multilogin нажмите <code>Add proxy</code><br>
+            <strong>2.</strong> Выберите тип: <code>SOCKS5</code><br>
+            <strong>3.</strong> Введите параметры вашего прокси:
+            <ul>
+                <li>Host (IP адрес прокси)</li>
+                <li>Port (Порт прокси, обычно 1080 или 8080)</li>
+                <li>Username (Логин, если требуется)</li>
+                <li>Password (Пароль, если требуется)</li>
+            </ul>
+            <strong>4.</strong> Нажмите <code>Test Proxy</code> для проверки<br>
+            <strong>5.</strong> Если тест пройден, сохраните прокси
+        </div>
+
+        <h3>Шаг 4: Создание профиля с прокси</h3>
+        <div class="step-block">
+            <strong>1.</strong> Нажмите <code>Create Profile</code><br>
+            <strong>2.</strong> В разделе <code>Proxy</code> выберите добавленный SOCKS5 прокси<br>
+            <strong>3.</strong> Установите нужную геолокацию (она должна совпадать с геолокацией прокси)<br>
+            <strong>4.</strong> Завершите создание профиля
+        </div>
+
+        <h2>Лучшие практики использования SOCKS5</h2>
+        <ul>
+            <li><strong>Используйте жилые прокси:</strong> Они выглядят как настоящие домашние IP-адреса</li>
+            <li><strong>Ротируйте IP:</strong> Меняйте прокси каждые 24-48 часов для наибольшей безопасности</li>
+            <li><strong>Проверяйте скорость:</strong> Убедитесь, что прокси работает стабильно (ping < 200ms)</li>
+            <li><strong>Совпадайте геолокацию:</strong> IP прокси должен соответствовать выбранной стране в браузере</li>
+            <li><strong>Мониторьте использование:</strong> Регулярно проверяйте статус прокси в Multilogin</li>
+        </ul>
+
+        <div class="warning">
+            <strong>⚠️ Важно:</strong> Не используйте бесплатные прокси для серьёзной работы! Они часто блокируются и детектируются платформами. Инвестируйте в качественные платные прокси для максимальной надёжности.
+        </div>
+
+        <h2>Решение проблем</h2>
+
+        <h3>Проблема: "Proxy not working"</h3>
+        <p>
+            <strong>Решение:</strong> Проверьте IP адрес и порт прокси. Убедитесь, что провайдер прокси активен. Попробуйте другой прокси из вашего провайдера.
+        </p>
+
+        <h3>Проблема: Медленное соединение</h3>
+        <p>
+            <strong>Решение:</strong> Выберите прокси, ближайший географически к вам. Избегайте перегруженных IP адресов. Свяжитесь с провайдером прокси для отключения проблемного IP.
+        </p>
+
+        <h3>Проблема: Платформа детектирует VPN/Proxy</h3>
+        <p>
+            <strong>Решение:</strong> Используйте только жилые SOCKS5 прокси. Не экономьте на качестве прокси. Ротируйте IP чаще. Сочетайте прокси с антидетект браузером Multilogin для лучшего результата.
+        </p>
+
+        <div class="success">
+            <strong>✓ Совет:</strong> После настройки прокси тестируйте работоспособность перед началом серьёзной деятельности. Создайте тестовый аккаунт и проверьте, не блокируется ли он в течение 24 часов.
+        </div>
+
+        <div style="background-color: #e8f4ff; padding: 30px; border-radius: 8px; margin: 40px 0; border-left: 4px solid #00d4ff;">
+            <h3 style="color: #1a1a1a; margin: 0 0 15px 0;">Получить полный доступ к Multilogin</h3>
+            <p style="margin: 0;">Со скидкой 50% по промокоду <strong>50MAM</strong> вы можете начать работу по выгодной цене. Все необходимые инструменты уже включены.</p>
+            <a href="https://multilogin.com/ru-ru/?utm_source=MAM&utm_medium=partner&a_aid=MAM&a_bid=cf2e6f16" 
+               target="_blank" 
+               rel="noopener noreferrer sponsored" 
+               class="btn btn-primary" 
+               style="margin-top: 15px;">
+                Настроить Multilogin
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div>
+            <h4>Навигация</h4>
+            <a href="/">Главная</a>
+            <a href="/review/">Обзор Multilogin</a>
+            <a href="/setup/">Настройка прокси</a>
+            <a href="/offers/">Промокод 50MAM</a>
+        </div>
+        <div>
+            <h4>Информация</h4>
+            <a href="/disclosure/">Affiliate Disclosure</a>
+            <a href="/privacy/">Политика конфиденциальности</a>
+            <a href="https://multilogin.com/ru-ru/" target="_blank" rel="noopener noreferrer">Официальный сайт Multilogin</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Multilogin RU Expert. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+</body>
+</html>
